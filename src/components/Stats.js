@@ -23,7 +23,7 @@ import {Link} from 'react-router-dom';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import HistoryIcon from '@material-ui/icons/History';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-
+import Ethchart from './ChartEth'
 
 const drawerWidth = 240;
 
@@ -158,10 +158,85 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        
+        <div className="heading">
         <h2>
             Stats
         </h2>
+		</div>
+		<div className="row">
+		<div className="col-md-4">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">BUYS AND SELLS</h5>
+   <Ethchart/>
+   
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">PROFITS STATS</h5>
+   
+   <Ethchart/>
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">PROFITS BASED ON SELL TRIGGERS</h5>
+   <Ethchart/>
+   
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4 my-3">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">BUPROFITS BASED ON BUY TRIGGERS</h5>
+   
+   <Ethchart/>
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4 my-3">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">DAILY PROFITS</h5>
+   
+   <Ethchart/>
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4 my-3">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">AVERAGE HOLDING TIMES</h5>
+   
+   <Ethchart/>
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">AVERAGE PROFITS PER COIN</h5>
+   <Ethchart/>
+   
+		</div>
+		</div>
+		</div>
+		<div className="col-md-4">
+		<div class="card">
+		<div class="card-body">
+		<h5 class="card-title">MOST TRADED COINS</h5>
+   <Ethchart/>
+   
+		</div>
+		</div>
+		</div>
+		</div>
       </main>
     </div>
   );
