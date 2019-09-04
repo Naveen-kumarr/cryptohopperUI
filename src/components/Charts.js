@@ -23,7 +23,7 @@ import {Link} from 'react-router-dom';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import HistoryIcon from '@material-ui/icons/History';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-
+import Ethchart from './ChartEth'
 
 const drawerWidth = 240;
 
@@ -158,10 +158,49 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        
+        <div className="heading">
         <h2>
             Charts
         </h2>
+		</div>
+		<div className="row mt-3">
+		<div className="col-md-8">
+		<Ethchart/>
+		</div>
+		<div className="col-md-4">
+		<h6>Available charts</h6>
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Coin</th>
+      <th scope="col">Price</th>
+      <th scope="col">Vol</th>
+      <th scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">ETH</th>
+      <td>0.99</td>
+      <td></td>
+      <td>Ethereum</td>
+    </tr>
+    <tr>
+      <th scope="row">BTC</th>
+      <td>0.989</td>
+      <td></td>
+      <td>Bitcoin</td>
+    </tr>
+    <tr>
+      <th scope="row">GXT</th>
+      <td>0.87</td>
+      <td></td>
+      <td>GXT</td>
+    </tr>
+  </tbody>
+</table>
+		</div>
+		</div>
       </main>
     </div>
   );
