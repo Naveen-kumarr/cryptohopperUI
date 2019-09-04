@@ -1,0 +1,51 @@
+.full{
+    background: #f8f8ff
+}
+.heading1{
+    padding-left: 0;
+    line-height: 60px;
+    font-size: 34px;
+    font-family: SofiaProLight, sans-serif ;
+}
+.heading2{
+    font-family: SofiaProLight, sans-serif;
+    font-size: 24px ;
+    line-height: 60px ;
+    color: #232368;
+    margin-top: 0;
+}
+.paragraph1{
+    color: #232368;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 13px;
+    
+}
+.paragraph2{
+    color: #232368;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 13px;
+
+}
+.buttons{
+    display: flex;
+    margin-right: auto;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+.btn btn-secondary1{
+    margin-right: 15px ;
+}
+.btn btn-secondary2{
+    margin-right: 15px;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 0;
+    margin-right: 50px;
+    margin-top: 20px;
+}
