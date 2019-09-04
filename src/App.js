@@ -16,13 +16,14 @@ import BackTesting from './components/BackTesting';
 import Charts from './components/Charts';
 import LandingPage from './components/LandingPage';
 import TradeHistory from './components/TradeHistory';
+import Hopperlist from './components/Hoppers';
 
 function App() {
   return (
     <BrowserRouter>
     <div >
     <Route exact path="/" component={Drawerr} />
- 
+ <Route exact path="/hopperlist" component={Hopperlist} />
       <Route  exact path="/dashboard" component={Dashboard} />
       <Route exact path="/navbar" component={NavBar}/>
       <Route exact path="/drawerr" component={Drawerr}/>

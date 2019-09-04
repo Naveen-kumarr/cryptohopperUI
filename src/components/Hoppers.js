@@ -23,8 +23,7 @@ import {Link} from 'react-router-dom';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import HistoryIcon from '@material-ui/icons/History';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import './drawerr.css'
-
+import HopperList from '../components/hopperlist';
 
 const drawerWidth = 240;
 
@@ -117,14 +116,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            NvestHopper
-			<span style={{ position: "absolute", right: "10px" }}>
-              <i class="fa fa-moon-o" aria-hidden="true" ></i></span>
-            <span style={{ position: "absolute", right: "45px" }}>
-              <i class="fa fa-comments-o" aria-hidden="true"></i></span>
-            <span style={{ position: "absolute", right: "80px" }}>
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </span>
+            CryptoHopper
           </Typography>
         </Toolbar>
       </AppBar>
@@ -144,7 +136,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <List>
         <ul class="list-group">
-		<Link to="/hopperlist" class="list-group-item">Your Hoppers</Link>
+        <Link to="/Hoppers" class="list-group-item">Your hoppers</Link>
       <Link to="/Drawerr" class="list-group-item">Dashboard</Link>
       <Link to="/TradeHistory" class="list-group-item">Trade History</Link>
       <Link to="/Stats" class="list-group-item">Stats</Link>
@@ -167,8 +159,8 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-       
-        <Dashboard/>
+        
+        <HopperList></HopperList>
       </main>
     </div>
   );
