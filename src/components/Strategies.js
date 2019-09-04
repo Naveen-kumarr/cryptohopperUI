@@ -158,10 +158,38 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        
+        <div className="heading">
         <h2>
             Strategies
         </h2>
+		</div>
+		 <button type="button" class="btn btn-raised btn-info float-right ml-3" style={{backgroundColor: "#0D1F47"}}>Documentation</button>
+            <button type="button" class="btn btn-raised btn-info float-right " style={{backgroundColor: "#0D1F47"}}>New Strategy</button>
+			 <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Strategies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Market Strategies</a>
+  </li>
+  
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <h5>
+      You do not have any Strategies
+    </h5>
+    <button type="button" class="btn btn-raised btn-primary" style={{backgroundColor: "#0D1F47"}}>Create a strategy now</button>
+    <button type="button" class="btn btn-raised btn-secondary ml-2" style={{backgroundColor: "#0D1F47"}}>Read Documentation</button>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h5>
+      You have not downloaded any strategies from the Marketplace
+    </h5>
+    <button type="button" class="btn btn-raised btn-primary" style={{backgroundColor: "#0D1F47"}}>Go to the Marketplace</button>
+    </div>
+  
+</div>
       </main>
     </div>
   );

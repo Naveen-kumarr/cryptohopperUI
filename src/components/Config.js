@@ -158,10 +158,63 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <div className={classes.drawerHeader} />
-        
+        <div className="heading">
         <h2>
             Config
         </h2>
+		</div>
+		 <h5>
+          Hopper configuration
+        </h5>
+        <form>
+  <div class="form-group">
+    <label for="hoppername">Hopper Name</label>
+    <input type="text" class="form-control" id="hoppername" aria-describedby="emailHelp"/>
+    
+  </div>
+  <div class="form-group">
+    <label for="exchange">Exchange</label>
+    <input type="text" class="form-control" id="exchange"/>
+  </div>
+  <div class="form-group">
+    <label for="percentagebid">Percentage Bid</label>
+    <input type="text" class="form-control" id="percentagebid"/>
+  </div>
+  <div class="form-group">
+    <label for="Maxbuy">Max open time to buy</label>
+    <input type="text" class="form-control" id="Maxbuy"/>
+  </div>
+  <div class="form-group">
+    <label for="maxposition">Max open position</label>
+    <input type="text" class="form-control" id="maxposition"/>
+  </div>
+  <div class="form-group">
+    <label for="Maxopen">Max percentage open position per coin</label>
+    <input type="text" class="form-control" id="Maxopen"/>
+  </div>
+  <div class="form-group">
+    <label for="coins">Coins</label>
+    <input type="text" class="form-control" id="coins"/>
+  </div>
+  <div class="form-group">
+    <label for="strategy">Strategy</label>
+    <input type="text" class="form-control" id="strategy"/>
+  </div>
+  <div class="form-group">
+    <label for="takeprofiy">Take Profit</label>
+    <input type="text" class="form-control" id="takeprofiy"/>
+  </div>
+  <div class="form-group">
+    <label for="maxsell">Max Open Time to sell</label>
+    <input type="text" class="form-control" id="maxsell"/>
+  </div>
+  <div class="form-group">
+    <label for="percentageask">Percentage Ask</label>
+    <input type="text" class="form-control" id="percentageask"/>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" style={{backgroundColor: "#0D1F47"}}>Save</button>
+</form>
       </main>
     </div>
   );
