@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
+import Img from '../Image/nv.png'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -80,10 +80,10 @@ export default function SimpleTabs() {
       </AppBar>
       <TabPanel value={value} index={0}>
       <div class="card" style={{width: "18rem"}}>
- 
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+ <img src={Img}/>
+  <div class="card-body mt-3" style={{textAlign:"center"}}>
+    <h6 class="card-title">Binance BTC Hopper</h6>
+    <p class="card-text">Binance | No subscription</p>
     <a href="#" class="btn btn-primary" style={{backgroundColor:'#0D1F47'}}>Select</a>
     <a href="#" class="btn btn-primary ml-2" style={{backgroundColor:'#0D1F47'}}>Template Info.</a>
   </div>

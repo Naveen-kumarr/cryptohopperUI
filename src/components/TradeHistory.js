@@ -160,31 +160,32 @@ export default function PersistentDrawerLeft() {
         <div className={classes.drawerHeader} />
         
          <>
-            <div className="TradeHistory py-3" style={{backgroundColor:"#f7f7fe"}}>
-                <h1> Trade History</h1>
+            <div className="TradeHistory py-3 heading" style={{backgroundColor:"#f7f7fe"}}>
+                <h2> Trade History</h2>
                 
              
             </div>
             
-            <div className="search">
-              
-                <div class="card mx-2" >
- 
-  <div class="card-body">
-    <div className="row">
-        <div className="col-md-6">
-        <input type="text" style={{width:"80%"}}/>
-        <button type="button" class="btn btn-Search" style={{width:"20%", color:"blue", verticalAlign:"unset", lineHeight:"1.2"}}>Search</button>
-        
-
-        </div>
-        <div className="col-md-6">
-            <span>Advanced Search</span>
-            <button type="button" class="btn btn-Advanced Search" style={{float:"right",color: "blue"}}>Advanced Search</button>
-            </div>
-        </div>
+            <div className="search mt-3">
+              <div className="row">
+			  <div className="col-md-6">
+			  <form class="form-inline">
+  <div class="form-group mb-2">
+    
   </div>
+  <div class="form-group sm-3 mb-2" style={{width:"80%"}}>
+    <input type="text" class="form-control" id="inputPassword2" placeholder="Search" style={{width:"100%"}}/>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2" style={{width:"20%",backgroundColor:"#0D1F47"}}>Search</button>
+</form>
 </div>
+<div className="col-md-6">
+<span>Advance Search</span>
+<button type="submit" class="btn btn-primary mb-2" style={{float:"right",backgroundColor:"#0D1F47"}}>Export</button>
+</div>
+			  
+			  </div>
+                
 
                 </div>
                 <div className="table">
