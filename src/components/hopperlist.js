@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Img from '../Image/nv.png'
+import {Link} from 'react-router-dom';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -84,7 +85,7 @@ export default function SimpleTabs() {
   <div class="card-body mt-3" style={{textAlign:"center"}}>
     <h6 class="card-title">Binance BTC Hopper</h6>
     <p class="card-text">Binance | No subscription</p>
-    <a href="#" class="btn btn-primary" style={{backgroundColor:'#0D1F47'}}>Select</a>
+    <Link to="/dashboard"><button class="btn btn-primary" style={{backgroundColor:'#0D1F47'}}>Select</button></Link>
     <a href="#" class="btn btn-primary ml-2" style={{backgroundColor:'#0D1F47'}}>Template Info.</a>
   </div>
 </div>

@@ -117,6 +117,13 @@ export default function PersistentDrawerLeft() {
           </IconButton>
           <Typography variant="h6" noWrap>
            NvestHopper
+		   <span style={{ position: "absolute", right: "10px" }}>
+              <i class="fa fa-moon-o" aria-hidden="true" ></i></span>
+            <span style={{ position: "absolute", right: "45px" }}>
+              <i class="fa fa-comments-o" aria-hidden="true"></i></span>
+            <span style={{ position: "absolute", right: "80px" }}>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </span>
           </Typography>
         </Toolbar>
       </AppBar>
