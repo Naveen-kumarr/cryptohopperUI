@@ -137,6 +137,7 @@ export default function PersistentDrawerLeft() {
         </div>
         <List>
         <ul class="list-group">
+		  <Link to="/hopperlist" class="list-group-item">Your Hoppers</Link>
       <Link to="/Drawerr" class="list-group-item">Dashboard</Link>
       <Link to="/TradeHistory" class="list-group-item">Trade History</Link>
       <Link to="/Stats" class="list-group-item">Stats</Link>

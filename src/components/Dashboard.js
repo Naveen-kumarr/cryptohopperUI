@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Switch from "react-switch";
 import { Drawer, Paper, Typography, Box, Divider } from '@material-ui/core';
 import Drawerr from './Drawerr';
 import RefreshIcon from '@material-ui/icons/Refresh';
@@ -14,172 +15,96 @@ import PublishIcon from '@material-ui/icons/Publish';
 
 
 class Dashboard extends Component {
+	constructor() {
+    super();
+    this.state = { checked: false,
+checkedone:true,
+checkedtwo:true	};
+    this.handleChange = this.handleChange.bind(this);
+	    this.handleChangeone = this.handleChangeone.bind(this);
+		    this.handleChangetwo = this.handleChangetwo.bind(this);
+  }
+ 
+  handleChange(checked) {
+    this.setState({ checked });
+  }
+    handleChangeone(checkedone) {
+    this.setState({ checkedone });
+  }
+    handleChangetwo(checkedtwo) {
+    this.setState({ checkedtwo });
+  }
     render() {
         return (
-            <div class = "container">
-                <div class="row">
-                    <div class="col-8" >
-                        <div class="row">
-                            <div class="col-6">
-                            <Box marginTop="10%" marginRight="30%" color ="blue">
-                            <h6 paddingBottom = "10%">
-                                OPEN ORDERS
-                            </h6>
-                                </Box>
-                            </div>
-                            <div class="col-6">
-                            <div style={{marginTop:"10%",marginLeft:"70%",color: "grey"}}>
-                            <RefreshIcon float="right"/>
-                            <MinimizeIcon float="right"/>
-                            <CloseIcon float="right"/>
-                            </div>
-                            </div>
-                            </div>
-                        
-                            
-                        <Box marginTop="5%">
-                            <h7>
-                                No current active orders placed by CryptoHopper
-                            </h7>
-                        </Box>
-                        <div style={{
-                            marginTop:"9%",
-                            padding:"0%"
-                        }}>
-                        <ul class="nav">
-                            <li class="nav-item">
-                            <a class="nav-link active " href="#">Open Position</a>
-                            </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Short Position</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reserved Funds</a>
-                        </li>
-                        </ul>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-6">
-                            <Box paddingTop="25%" >
-                            <h6 paddingBottom= "5%" >
-                                Latest 5 sells
-                            </h6>
-                            
-                            </Box>
-                        </div>
-                        <div class="col-6">
-                        <div style={{marginTop:"25%",marginLeft: "70%"}}>
-                            <RefreshIcon float="right"/>
-                            <MinimizeIcon float="right"/>
-                            <CloseIcon float="right"/>
-                        </div>
-                        </div>
-                        </div>
-                        <Box>
-                        <h7 paddingBottom = "15%">
-                               No sell trades made yet
-                            </h7>
-                        </Box>
+         <div>
+		<div className="heading">
+		<h2>Dashboard</h2>
+		</div>
+		<div className="row">
+		<div className="col-md-8">
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Open positions</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Short Positions</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Reserved Funds</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+		</div>
+		<div className="col-md-4">
+		<div class="card">
+  <div class="card-body">
+    <h6 class="card-title">BTC INVESTED</h6>
+    <h6 class="card-text"><b>0.09970360</b></h6>
+	<p>TOTAL BTC RETURNS:</p>
+	<h4 style={{color:"red"}}>-0.01601307(-0.00%)</h4>
+    <button class="btn btn-primary" style={{backgroundColor:"#0D1F47"}}>Reset</button>
+	<button class="btn btn-primary ml-2" style={{backgroundColor:"#0D1F47"}}>Info</button>
+  </div>
+</div>
 
-                        
-                        
-                        </div> 
-                    <div class="col-4">
-                        
+<div class="card my-3">
+  <div class="card-body">
+    <h5 class="card-title">Paper Trading</h5>
+    <p class="card-text">Exchange:<b>Binance</b></p>
+    <button class="btn btn-primary" style={{backgroundColor:"#0D1F47"}}>Deposite</button>
+	<button class="btn btn-primary ml-2" style={{backgroundColor:"#0D1F47"}}>Withdraw</button>
+  </div>
+</div>
 
-                        <Box marginTop="5%">
-                        <div class="row">
-                            <div class="col-2">
-                            <TrendingUpIcon/>
-                    </div>
-                        <div class="col-10">
-                            <h6>
-                                BTC INVESTED:
-                            </h6>
-                            <h6>
-                                0.00000000000
-                            </h6>
-                            <h6>
-                                TOTAL BTC RETURNS:
-                            </h6>
-                            <h6>
-                                0.00000000000(0%)
-                            </h6>
-                            <a href="url">reset   | </a>
-                            
-                            <a href="url">info</a>
-                            </div>
-                            </div>
-                        </Box>
-                        <Divider marginTop = "5%"/>
-                        <Box marginTop = "10%">
-                        <div class="row">
-                            <div class="col-2">
-                        <AccountBalanceWalletIcon/>
-                            </div>
-                            <div class="col-10">
-                            <h6>
-                                Total BTC in assets on exchange:
-                            </h6>
-                            <h6>
-                                0.00000000000(0%)  
-                            </h6>
-                            <h6>
-                                Start balance:0.00000000
-                                <a href="url">edit </a>
-                            </h6>
-                            
-                            </div>
-                        </div>
-                        </Box>
-                        <Divider/>
-
-                        <Box marginTop = "10%">
-                        <div class="row">
-                            <div class="col-2">
-                                <TrafficIcon/>
-                            </div>
-                            <div class="col-10">
-                                <h6>
-                                    Hopper is enabled
-                                </h6>
-                                <ToggleOnIcon></ToggleOnIcon>
-                            </div>
-                        </div>
-                        <Divider/>
-                        </Box>
-                        <Box marginTop = "10%">
-                        <div class="row">
-                            <div class="col-2">
-                                <GetAppIcon/>
-                            </div>
-                            <div class="col-10">
-                                <h6>
-                                    Buying is enabled
-                                </h6>
-                                <ToggleOnIcon></ToggleOnIcon>
-                            </div>
-                        </div>
-                        <Divider/>
-                        </Box>
-                        <Box marginTop = "10%">
-                        <div class="row">
-                            <div class="col-2">
-                                <PublishIcon/>
-                            </div>
-                            <div class="col-10">
-                                <h6>
-                                    Selling is enabled
-                                </h6>
-                                <ToggleOnIcon></ToggleOnIcon>
-                            </div>
-                        </div>
-                        </Box>
-                        </div>
-                </div>
-                
-            </div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><span style={{color:"red"}}>HOPPER IS DISABLED</span></h5>
+	<label>
+        <Switch onChange={this.handleChange} checked={this.state.checked} />
+      </label>
+	<br/><br/>
+	<hr/>
+    <h5 class="card-title"><span style={{color:"green"}}>BUYING IS ENABLED</span></h5>
+	<label>
+        <Switch onChange={this.handleChangeone} checked={this.state.checkedone} />
+      </label>
+	<br/><br/>
+	<hr/>
+	<h5 class="card-title"><span style={{color:"green"}}>SELLING IS ENABLED</span></h5>
+	<label>
+        <Switch onChange={this.handleChangetwo} checked={this.state.checkedtwo} />
+      </label>
+	<br/><br/>
+	<hr/>
+  </div>
+</div>
+		</div>
+		</div>
+		</div>		 
         )
     }
 }

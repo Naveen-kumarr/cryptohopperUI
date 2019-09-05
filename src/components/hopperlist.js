@@ -59,7 +59,7 @@ export default function SimpleTabs() {
       <>
     <div className="Your Hoppers py-3 row">
         <div className="col-md-6">
-    <h1>Your Hoppers</h1>
+    <h2>Your Hoppers</h2>
     </div>
     <div className="col-md-6" >
         <div className="float" style={{float:"right"}}>
